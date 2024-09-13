@@ -1,0 +1,22 @@
+.previous-week-weather {
+    padding: 20px;
+  }
+  
+  .weather-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .weather-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .weather-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
