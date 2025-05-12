@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
-import HomeVideo from './Home.mp4'; 
 
 const Home = () => {
   const [name, setName] = useState('');
@@ -39,10 +38,6 @@ const Home = () => {
 
   return (
     <div className="container">
-      <video autoPlay loop muted className="background-video">
-        <source src={HomeVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
       <h2 className="title">WEATHER FINDER</h2>
       <form className="form" onSubmit={handleSubmit}>
         <div className="form-group">

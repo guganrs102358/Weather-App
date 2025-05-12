@@ -9,7 +9,6 @@
   color: #fff;
 }
 
-/* Weather container */
 .weather-container {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
@@ -20,7 +19,6 @@
   text-align: center;
 }
 
-/* Input container */
 .input-container {
   margin-bottom: 20px;
 }
@@ -71,7 +69,6 @@ button:hover {
 
 .weather-details h2 {
   color: #00ccff;
-  text-shadow: 0 0 5px #00ccff, 0 0 5px #00ccff;
 }
 
 .weather-details p {

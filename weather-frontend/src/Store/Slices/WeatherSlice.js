@@ -27,7 +27,6 @@ export const getCityData = createAsyncThunk('city', async (obj) => {
   }
 });
 
-// Fetch 5 days forecast
 export const get5DaysForecast = createAsyncThunk('5days', async (obj) => {
   try {
     const request = await axios.get(
@@ -50,15 +49,13 @@ export const get5DaysForecast = createAsyncThunk('5days', async (obj) => {
   }
 });
 
-// Fetch previous week's weather data
 export const getPreviousWeekWeather = createAsyncThunk('previousWeek', async (obj) => {
   try {
     if (!obj.lat || !obj.lon) {
       throw new Error('Latitude and Longitude are required');
     }
 
-    // Adjust the date to 7 days ago
-    const sevenDaysAgo = Math.floor(Date.now() / 1000) - 604800; // Unix timestamp for 7 days ago
+    const sevenDaysAgo = Math.floor(Date.now() / 1000) - 604800; 
     const request = await axios.get(
       `${hostName}/data/2.5/onecall/timemachine`,
       {
@@ -66,7 +63,7 @@ export const getPreviousWeekWeather = createAsyncThunk('previousWeek', async (ob
           lat: obj.lat,
           lon: obj.lon,
           dt: sevenDaysAgo,
-          units: obj.unit || 'metric', // Default to 'metric' if not provided
+          units: obj.unit || 'metric', 
           APPID: appId,
         },
       }

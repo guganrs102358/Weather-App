@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
 import { getCityData, get5DaysForecast } from '../Store/Slices/WeatherSlice.js';
 import './Weather1.css';
 
@@ -50,7 +49,6 @@ function Weather1() {
     return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
   };
 
-  // Map date to day of the week and return both the day and date
   const getDayAndDate = (dateString) => {
     const date = new Date(dateString);
     const day = date.toLocaleDateString('en-US', { weekday: 'long' });
@@ -62,7 +60,6 @@ function Weather1() {
     return { day, formattedDate };
   };
 
-  // Group forecast data by day of the week
   const groupByDay = (list) => {
     if (!Array.isArray(list)) {
       console.error("Expected an array for forecast data list, but got:", list);
@@ -115,7 +112,6 @@ function Weather1() {
                 alt={citySearchData.data.weather[0].description}
                 className="weather-icon"
               />
-              {/* <Link to="/PreviousWeekWeather">View Previous Week's Weather</Link> */}
             </div>
           )
         )}

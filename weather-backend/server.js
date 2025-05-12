@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/Weather', {
+mongoose.connect('mongodb://127.0.0.1:27017/Weather', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
